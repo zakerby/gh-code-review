@@ -14,10 +14,10 @@ inputs:
           fetch-depth: 0
 
       - name: Install Ollama
-      run: |
-        curl -fsSL https://ollama.com/install.sh | bash
-        ollama pull ${{ inputs.llm-model }}
-      shell: bash
+        run: |
+          curl -fsSL https://ollama.com/install.sh | bash
+          ollama pull ${{ inputs.llm-model }}
+        shell: bash
 
       - name: Get modified files
         id: get-modified-files
